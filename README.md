@@ -31,3 +31,16 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/p
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+
+Experienced in running 130+ Kubernetes (AWS EKS) clusters for telecom organization where scaling, resiliency, security, monitoring are prioritized 
+Hands-on experience with Infrastructure as Code products on Terraform and AWS CDK
+Experience in the design and implementation of scalable, secure, and resilient AWS solutions utilizing Serverless, EKS, storage, and networking best practices
+Experienced in working in an SRE / DevOps team and part of its maturity journey
+Proficiency with CI/CD on deployment, management, and monitoring of applications
+Experienced working with using certificates for message signing and mutual TLS [Istio, AWS PCA]
+Successfully configured and managed EKS add-ons, including External Secrets, EBS CSI Driver, EFS CSI Driver, CoreDNS, Local DNS Cache, Cert Manager, and both internal and external Ingress Controllers to enhance cluster functionality and security
+Implemented a hybrid architecture utilizing Karpenter to optimize resource utilization, enhance high availability, and achieve significant cost reductions [ SPOT / On Demand], driving operational efficiency and scalability in cloud environments
+Deployed Kyverno in the EKS cluster, establishing best practice policies to enforce security and compliance, thereby ensuring a robust and secure Kubernetes environment
+Established end-to-end observability for both infrastructure and applications using the ELK stack with Fluent Bit, AMP, Grafana, SNS, CloudWatch, and Elasticsearch, providing holistic monitoring and actionable insights into system performance
+
