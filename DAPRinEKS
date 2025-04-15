@@ -1,0 +1,72 @@
+DAPR
+
+Keeping Dapr (Distributed Application Runtime) enabled in an EKS (Elastic Kubernetes Service) cluster brings several key benefits for building and managing microservices-based applications. Let’s break it down simply:
+🔍 What is Dapr?
+Dapr is a portable, event-driven runtime that helps developers build resilient, stateless, and stateful microservices. It provides building blocks as sidecars (via containers), which your application can call over HTTP or gRPC.
+✅ Benefits of Keeping Dapr Enabled in EKS
+Simplifies Microservices Development
+
+No need to manually implement retries, service discovery, pub/sub, etc.
+
+Dapr provides reusable building blocks out-of-the-box.
+
+Polyglot Support
+
+You can write services in any language (Node.js, Python, Go, etc.) because Dapr communicates via HTTP/gRPC.
+
+Built-in Observability
+
+Tracing, metrics, and logs integrated with tools like Prometheus, Grafana, Zipkin, etc.
+
+Resilient Communication
+
+Automatic retries, timeouts, and circuit breakers for service-to-service calls.
+
+State Management
+
+Built-in state management with pluggable backends like Redis, CosmosDB, DynamoDB, etc.
+
+Pub/Sub Messaging
+
+Enables decoupled event-driven architectures with brokers like Kafka, Redis Streams, NATS, etc.
+
+Secure Secret Management
+
+Retrieve secrets securely using providers like AWS Secrets Manager, HashiCorp Vault, etc.
+
+Simplified Kubernetes Integration
+
+Dapr sidecars are automatically injected into your pods and managed alongside your services.
+
+Portable Across Environments
+
+Apps using Dapr can move from local dev to EKS (or any cloud) without code changes.
+
+📌 Why Use Dapr?
+Speeds up development: You don’t reinvent the wheel for cross-cutting concerns.
+
+Reduces boilerplate: No need to add custom retry logic, circuit breaking, etc.
+
+Enables best practices: Implements microservices patterns like stateful services, pub/sub, etc., the right way.
+
+Cloud-agnostic: Helps avoid vendor lock-in, yet integrates deeply with cloud services (like AWS S3, DynamoDB, etc.)
+
+⚙️ How is Dapr Helpful in Real Scenarios?
+
+Scenario	How Dapr Helps
+Service A calls Service B	Use Dapr’s service invocation with retries and tracing.
+You need to store user session data	Use Dapr’s state management with Redis/DynamoDB.
+You want async messaging between services	Use Dapr’s pub/sub system with Kafka or Redis Streams.
+You need to get AWS secrets securely	Use Dapr’s secrets management with AWS Secrets Manager.
+Want to log and monitor all calls	Built-in observability with OpenTelemetry integration.
+
+🚀 In an EKS Cluster Specifically:
+Sidecar Architecture: Dapr sidecars are deployed as containers alongside your app pods.
+
+Scales With Your App: Follows Kubernetes autoscaling, high availability, etc.
+
+Native AWS Integration: Easily use Dapr with AWS services like S3, SQS, Secrets Manager.
+
+Consistent Across Environments: Same code works on Minikube, local Docker, and EKS.
+
+If we're running microservices in EKS, enabling Dapr helps you build faster, scale better, and maintain less custom infrastructure code.
