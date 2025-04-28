@@ -65,6 +65,29 @@ Sidecar Architecture: Dapr sidecars are deployed as containers alongside your ap
 
 Scales With Your App: Follows Kubernetes autoscaling, high availability, etc.
 
+
+package main
+
+import (
+    "log"
+    "github.com/blushft/go-diagrams/diagram"
+    "github.com/blushft/go-diagrams/nodes/generic"
+)
+
+func main() {
+    d, err := diagram.New(diagram.Label("my-diagram"), diagram.Filename("diagram"))
+    if err != nil {
+        log.Fatal(err)
+    }
+    fw := generic.Network.Firewall().Label("fw")
+    sw := generic.Network.Switch().Label("sw")
+    d.Connect(fw, sw)
+    if err := d.Render(); err != nil {
+        log.Fatal(err)
+    }
+}
+
+
 Native AWS Integration: Easily use Dapr with AWS services like S3, SQS, Secrets Manager.
 
 Consistent Across Environments: Same code works on Minikube, local Docker, and EKS.
